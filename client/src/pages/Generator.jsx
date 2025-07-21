@@ -32,7 +32,7 @@ function Generator() {
     formData.append("jobDescription", jobDescription);
 
     try {
-      const response = await axios.post("${import.meta.env.VITE_API_URL}/api/generate", formData, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/generate`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`, // Attach the auth token

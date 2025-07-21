@@ -115,7 +115,28 @@ app.post(
           .send("Resume or job description is empty or unreadable.");
       }
 
-      const prompt = `You are an expert career assistant...`; // Your prompt here
+      const prompt = `You are an expert career assistant and professional writer. Your task is to write a compelling, unique, and professional cover letter based on the provided resume and job description.
+
+**Instructions:**
+1.  **Analyze and Synthesize:** Do not simply copy sentences. Read and understand both the resume and the job description. Synthesize the information to show how the candidate's skills and experience directly align with the job's requirements.
+2.  **Use a Professional Tone:** The tone should be enthusiastic, confident, and professional.
+3.  **Paraphrase Everything:** All content must be in your own words. Paraphrase the skills from the resume and the requirements from the job description. Avoid plagiarism.
+4.  **Structure:** Create a well-structured cover letter with an introduction, a body that highlights key qualifications with specific examples, and a strong concluding paragraph with a call to action.
+5.  **Format:** Use Markdown for clear formatting (e.g., bolding for emphasis, paragraphs).
+
+---
+
+**[Resume Information]**
+${resumeText}
+
+---
+
+**[Job Description]**
+${jobDescription}
+
+---
+
+**[Generated Cover Letter]**`;
       const result = await model.generateContent(prompt);
       const coverLetter = result.response.text();
 

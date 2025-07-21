@@ -18,7 +18,7 @@ function Register() {
             // This URL assumes your client and server are running on the same machine.
             // You might need to use the full URL like 'http://localhost:3000/api/auth/register'
             // if you run into CORS issues later.
-            await axios.post('/api/auth/register', { email, password });
+            await axios.post('${import.meta.env.VITE_API_URL}/api/auth/register', { email, password });
             
             // If registration is successful, automatically navigate to the login page
             navigate('/login');

@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
     // This function assumes your API is running on the same domain.
     // We'll add a proxy later if needed.
     const login = async (email, password) => {
-        const res = await axios.post('/api/auth/login', { email, password });
+        const res = await axios.post('${import.meta.env.VITE_API_URL}/api/auth/login', { email, password });
         localStorage.setItem('token', res.data.token);
         setToken(res.data.token);
     };

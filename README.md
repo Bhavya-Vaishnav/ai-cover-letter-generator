@@ -91,4 +91,3 @@ To set up and run this project on your own machine, follow these steps.
     The frontend will be available at `http://localhost:5173` (or another port if 5173 is busy).
 
 ***
-*After you deploy your project, remember to add a "Live Demo" link at the top of this file!*

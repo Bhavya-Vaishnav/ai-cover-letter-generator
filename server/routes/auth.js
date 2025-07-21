@@ -4,7 +4,7 @@
 import express from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import User from '../models/user.js'; // Note: .js extension is often needed in ES Modules
+import User from '../models/User.js'; // Note: .js extension is often needed in ES Modules
 
 const router = express.Router();
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from '../context/AuthContext'; // 👈 Import useAuth
+import { useAuth } from '../context/AuthContext'; 
 import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
@@ -8,7 +8,7 @@ function Login() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     
-    const { login } = useAuth(); // 👈 Get the login function from our context
+    const { login } = useAuth(); 
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {

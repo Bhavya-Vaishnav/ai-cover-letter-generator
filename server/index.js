@@ -28,12 +28,6 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 // In server/index.js
 
-// Add this debug middleware
-app.use((req, res, next) => {
-  console.log("Incoming Request Origin:", req.headers.origin);
-  next();
-});
-
 // ...
 // A list of all frontend URLs that are allowed to make requests to our backend
 const allowedOrigins = [
